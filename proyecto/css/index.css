@@ -1,0 +1,206 @@
+*{ 
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Open sans' ;
+}
+body {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+   
+}
+.relleno{
+    background: red;
+    height: 10%;
+    width: 100%;
+    
+}
+.menu {
+    width: 100%;
+}
+.navegacion {
+   background-color: black;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0 0px 10px black;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: flex;
+}
+.navegacion > div {
+    width: 50%;
+}
+.navegacion ul {
+    list-style: none;
+}
+.menu{
+    width: 100%;
+}
+.menu > li {
+    margin-left: 5%;
+    font-size: 200%;
+    display: inline-block; /* para que las opciones esten una al lado de la otra */
+}
+.opciones{
+    /*obliga a los elementos hijo a permanecer dentro de su contenedor*/
+  display: flex;
+  margin: auto;
+  padding-right: 5%;
+}
+.botones {
+    float: right;
+}
+.menu > li > a {
+    display: block;
+    color:white;
+    text-decoration: none;
+    width: 100%;   
+}
+.menu li a:hover{
+    color: gray ;
+    transition: all .3s;
+}
+.submenu {
+    position: absolute;
+    background-color:black;
+    visibility : hidden ;
+    opacity: 0;
+    transition: opacity 1.5s;
+    font-size: 75%;
+}
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: white;  
+    text-decoration: none;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+h2 {
+    color: black;
+    font-size: 22px;  
+}
+.parrafo {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    margin: 100px;
+    word-wrap: break-word;
+}
+footer {
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: #536976;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000, white);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #000000, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+    box-shadow: 5px 0px 10px black;
+}
+.container-body{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.columna{
+   
+   margin: auto; 
+}
+.row{
+    float: left;
+    margin: 15px;
+}
+.icono {
+    width: 50px;
+    height: 50px;
+}
+.logo{
+    width:35%;
+    height: 100%;
+}
+.logo1{
+    width: auto;
+    height: 100%;
+}
+.uno {
+    background-image: url(../imagenes/teclado.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 60%;
+    width: 75%;
+    height: 35%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uno p {
+    width: 50%;
+    height: auto;
+   
+}
+.portada {
+    width: 100%;
+    height: 600px;
+    background-image: url(../imagenes/cafe.jpg);
+    background-size: 100%;
+    animation: movimiento 20s infinite linear alternate;
+    position: relative;
+}
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+
+    }to{
+        background-position: top right;
+    }
+}
+.capa-gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black,blue);
+    opacity: 0.5;
+}
+.detalles{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+.detalles-text{
+    width: 100%;
+    max-width: 500px;
+    top: 10%;
+    position: relative;
+    left: 10px;
+    color: white;
+}
+.detalles-text h1{
+    font-size: 40px;
+    font-weight: 100;
+}
+.detalles-text p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.detalles-text button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    color: white;
+}
+hr{
+    background: -webkit-linear-gradient(left, black ,blue);
+    width: 75%;
+    height: 0.3%;
+    border-style: none;
+}
